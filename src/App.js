@@ -19,7 +19,7 @@ function App() {
           <img src={imagen} alt={producto.title} className="img-fluid"></img>
         </div>
         <div className='col-md-4 pt-4'>
-          <h1>{producto.title}</h1>
+          <h2>{producto.title}</h2>
           <p>{producto.description}</p>
         </div>
       </div>
