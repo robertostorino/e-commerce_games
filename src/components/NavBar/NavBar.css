@@ -1,0 +1,16 @@
+.color_grey {
+    background-color: #f7f7f7;
+}
+
+.underline-hover::after{
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: blue;
+    display: block;
+    transition: all 750ms;
+}
+.underline-hover:hover::after{
+    width: 100%;
+    background-color: #39F5C1;
+}
