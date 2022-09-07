@@ -1,0 +1,6 @@
+.card--principal {
+    transition: 600ms ease-in-out;
+}
+.card--principal:hover {
+    transform: scale(1.04); 
+}

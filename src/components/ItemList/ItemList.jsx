@@ -30,56 +30,19 @@ const ItemList = ({items}) => {
     return (
         <div className="row">
             {
-                items.length ? (
-                    <div>
-                        {
-                            items.map((item) =>{
-                                return (
-                                    <div key={item.id} className="col-md-4 py-3">
-                                        <Item
-                                            title={item.title}
-                                            price={item.price}
-                                            description={item.description}
-                                            pictureUrl={item.pictureUrl}
-                                        />    
-                                    </div>
-                                );
-                            })
-                        }
-                    </div>
-                ) : (
-                    <p>Cargando productos ... </p>
-                )
+            items.map(item =>(
+                    <div key={item.id} className="col-md-4 py-3">
+                        <Item
+                            title={item.title}
+                            price={item.price}
+                            description={item.description}
+                            pictureUrl={item.pictureUrl}
+                        />    
+                    </div>)
+            )
             }
         </div>
     );
 };
 
 export default ItemList;
-
-
-{/* <div className="row">
-            {
-                products.length ? (
-                    <div>
-                        {
-                            products.map((product) =>{
-                                return (
-                                    <div key={product.id}>
-                                        <Item
-                                            id={product.id}
-                                            title={product.title}
-                                            price={product.price}
-                                            description={product.description}
-                                            pictureUrl={product.pictureUrl}
-                                        />    
-                                    </div>
-                                );
-                            })
-                        }
-                    </div>
-                ) : (
-                    <p>Cargando productos ... </p>
-                )
-            }
-        </div> */}

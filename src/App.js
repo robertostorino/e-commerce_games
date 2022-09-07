@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <NavBar />
       <ItemListContainer greeting="Bienvenido a Play 4 Win" />
       <ItemCount stock={5} initial={1} onAdd={0} />
