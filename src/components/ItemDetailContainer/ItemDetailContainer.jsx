@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { products } from '../data/data'
-import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})  //Persisto mis datos para pasarselo al hijo. Lo inicializo con un objeto vacío
@@ -12,7 +11,7 @@ const ItemDetailContainer = () => {
             new Promise ((resolve,reject) =>{
                 const product = products.find((prod) => prod.id === 1) //Me trae un solo objeto, en este caso el que coincida con id 1
                 setTimeout(() => {
-                    resolve();
+                    resolve(product);
                 }, 500);
             });
 

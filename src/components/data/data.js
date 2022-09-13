@@ -4,6 +4,7 @@ export const products = [
         "title":"Battlefield 2024 PS4", 
         "price":10500,
         "description": "FPS",
+        "info": "Battlefield ™ 2042 is a first-person shooter that marks a return to the franchise´s iconic all-out war. In a near-future world transformed by disorder, adapt and survive with the help of your squad and a cutting-edge arsenal on ever-changing battlefields. With 128-player * games, Battlefield ™ 2042 offers unprecedented scale on vast battlefields. Combatants will be able to enjoy various experiences: improved versions of Conquest and Advancement; Battlefield Portal - A new community platform where you can create, share and find unusual battles from the past, present and future of Battlefield ; and Battlefield Hazard Zone - A new squad-centric survival experience where every bullet, every skirmish, and every decision counts.",
         "pictureUrl":"http://d3ugyf2ht6aenh.cloudfront.net/stores/910/199/products/battlefield-2042-ps41-145e51a97d77ea55a816284387055452-640-0.jpg" 
     },
     {
