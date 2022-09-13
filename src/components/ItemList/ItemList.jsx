@@ -1,43 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Item from '../Item/Item';
 
 const ItemList = ({items}) => {
     
-    /* const [products, setProducts] = useState([]);
-
-    //Creo un Mock de Promise
-    const getProducts = new Promise((resolve,reject) => {
-        setTimeout(() => {
-            resolve(productList);
-        }, 2000);
-    });
-
-    const getProductsFromDB = async () => {
-        try {
-            const result = await getProducts;
-            setProducts(result);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    //simula la ejecución de la función getProductsFromDB
-    //Se ejecutará solo una vez ya que el array de dependencias está vacío
-    useEffect (() => {
-        getProductsFromDB();
-    }, []);  //[] array de dependencias
-     */
     return (
         <div className="row">
             {
             items.map(item =>(
                     <div key={item.id} className="col-md-4 py-3">
-                        <Item
-                            title={item.title}
-                            price={item.price}
-                            description={item.description}
-                            pictureUrl={item.pictureUrl}
-                        />    
+                        <Item item={item} />    
                     </div>)
             )
             }

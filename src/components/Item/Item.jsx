@@ -1,13 +1,15 @@
 import React from 'react'
 import './Item.css'
 
-const Item = ({id, title, price, description, pictureUrl}) => {
+const Item = ({item}) => {
     return(
         <div className="card card--principal">
-            <img className="card-img-top" src={pictureUrl} alt={title} />
+            <img className="card-img-top" src={item.pictureUrl} alt={item.title} />
             <div className="card-body">
-                <h3 className="card-title text-center">{title}</h3>
-                <p className="card-text text-center">${price}</p> 
+                <h3 className="card-title text-center">{item.title}</h3>
+                <p className="card-text text-center">${item.price}</p>
+
+                <button>Ver detalles</button> 
             </div>
         </div>
     );
