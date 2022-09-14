@@ -13,7 +13,7 @@ const ItemDetail = ({item}) => {
                 </div>
                 <div className="infoDetail col-md-6">
                     <h2>{item.title}</h2>
-                    <p>{item.description}</p>
+                    <p>{item.category}</p>
                     <p>{item.info}</p>
                     <h3 className="card-text">${item.price}</h3>
 
