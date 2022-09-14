@@ -5,17 +5,16 @@ import './Item.css'
 const Item = ({item}) => {
     return(
         <div className="card card--principal">
-            <Link to={"/item" + item.id}>
+            <Link to={`/item/${item.id}`} >
                 <img className="card-img-top" src={item.pictureUrl} alt={item.title} />
             </Link>
             <div className="card-body">
                 <h3 className="card-title text-center">{item.title}</h3>
                 <p className="card-text text-center">${item.price}</p>
-
-                <button className="btn btn-outline-secondary">
-                    <Link to={"/item" + item.id}>Ver detalles
-                    </Link>
-                </button> 
+                <Link to={`/item/${item.id}`}>
+                    <button className="btn btn-outline-secondary">Ver detalles
+                    </button> 
+                </Link>
             </div>
         </div>
     );

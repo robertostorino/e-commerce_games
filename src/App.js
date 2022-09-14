@@ -11,16 +11,14 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<ItemListContainer greeting="Bienvenido a Play 4 Win" />} />
-          <Route exact path="/category/:category" element={<ItemListContainer />} />
-          <Route exact path="/category" element={<ItemListContainer />} />
-          <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
+          <Route path="/" element={<ItemListContainer greeting="Bienvenido a Play 4 Win" />} />
+          <Route path="/category/:category" element={<ItemListContainer />} />
+          <Route path="/category" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />}/>
         </Routes>
       </BrowserRouter>
     </div>
   )
 }
-
-{/* <ItemListContainer greeting="Bienvenido a Play 4 Win" /> */}
 
 export default App;

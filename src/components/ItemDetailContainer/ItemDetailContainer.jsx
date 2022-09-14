@@ -8,14 +8,13 @@ import { useParams } from 'react-router-dom'
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})  //Persisto mis datos para pasarselo al hijo. Lo inicializo con un objeto vacío
     
-    const {id} = useParams();
-    console.log("el id es: " + id);
+    const {id} = useParams(0);
 
 
     useEffect( () => {
         const getProduct = () =>
             new Promise ((resolve,reject) =>{
-                const product = products.find((prod) => prod.id === 3) //Me trae un solo objeto, en este caso el que coincida con id 1
+                const product = products.find((prod) => prod.id === parseInt(id)); //Me trae un solo objeto, en este caso el que coincida con id 1
                 setTimeout(() => {
                     resolve(product);
                 }, 500);

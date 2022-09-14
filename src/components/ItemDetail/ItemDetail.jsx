@@ -9,11 +9,11 @@ const ItemDetail = ({item}) => {
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <img src={item.pictureUrl} alt={item.title} />
+                    <img src={item.pictureUrl} alt={item.title} width="350px"/>
                 </div>
                 <div className="infoDetail col-md-6">
                     <h2>{item.title}</h2>
-                    <p>{item.category}</p>
+                    <p className="dark-text">{item.category}</p>
                     <p>{item.info}</p>
                     <h3 className="card-text">${item.price}</h3>
 

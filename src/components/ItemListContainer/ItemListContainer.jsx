@@ -28,18 +28,13 @@ const ItemListContainer = ({greeting}) => {
                 }, 2000);
         });
 
-        console.log("categoria" + categoria);
-        console.log("category: " + category);
-        
         getProducts()
         .then((response) => {
                 if (categoria === "all") {
                     setItems(response);
-                    console.log("default");
                 } else {
                     
                     const productsArray = response.filter(products => products.category === categoria);
-                    console.log("HOLAAAAAA");
                     setItems(productsArray);
                 }
             }
