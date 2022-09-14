@@ -9,12 +9,13 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState({})  //Persisto mis datos para pasarselo al hijo. Lo inicializo con un objeto vacío
     
     const {id} = useParams();
+    console.log("el id es: " + id);
 
 
     useEffect( () => {
         const getProduct = () =>
             new Promise ((resolve,reject) =>{
-                const product = products.find((prod) => prod.id === id) //Me trae un solo objeto, en este caso el que coincida con id 1
+                const product = products.find((prod) => prod.id === 3) //Me trae un solo objeto, en este caso el que coincida con id 1
                 setTimeout(() => {
                     resolve(product);
                 }, 500);
@@ -27,7 +28,7 @@ const ItemDetailContainer = () => {
             .catch((error) => {
                 console.log(error)
             })
-    }, [])   //El useEfect en este caso se ejecutará 1 sola vez
+    }, [id])   //El useEfect en este caso se ejecutará 1 sola vez
 
     return (
         <div style={{minHeight: '70vs' }}>
