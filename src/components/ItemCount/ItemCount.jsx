@@ -1,29 +1,24 @@
-import React,{ useState } from 'react'
+import React,{ useState, useEffect } from 'react'
 
 //intial: es la cantidad de ítems. Sirve para inicializar el contador en 1 por defecto
 
-
-const ItemCount = (props) => {
+const ItemCount = ({initial, stock, onAdd}) => {
 
     //      Hooks
-    const [amount, setAmount] = useState(props.initial);
-    const [itemStock, setItemStock] = useState(props.stock);
-    const [itemAdd, setItemAdd] = useState(props.onAdd);
+    const [count, setCount] = useState(parseInt(initial));
+    // const [itemStock, setItemStock] = useState(props.stock);
+    // const [itemAdd, setItemAdd] = useState(props.onAdd);
 
     //incrementa
-    const incrementAmount = (value) => {
-        setAmount(amount + value);
+    const increase = (value) => {
+        setCount(count + value);
     }
 
-
-    //Agrega a Selected Products si amount es menor o igual al stock del item
-    const addProducts = () => {
-        if (amount <= itemStock) {
-            setItemStock(itemStock - amount); //reduzco el stock
-            setItemAdd(itemAdd + amount); //incremento la cantidad a agregar
-        }
-    }
-
+    //Agrego el useEffect para que al cambiar el valor "initial" se resetee
+    useEffect(() => {
+		setCount(parseInt(initial));
+	}, [initial]);
+    
     return (
         <div className="container py-4">
             <div className="row">
@@ -34,32 +29,35 @@ const ItemCount = (props) => {
                             type="button" 
                             className="btn btn-secondary" 
                             value="-" 
-                            onClick={() => {incrementAmount(-1)}}
-                            disabled={amount === props.initial}/>
+                            onClick={() => {increase(-1)}}
+                            disabled={count === initial}/>
                         <input 
                             type="text" 
                             className="form-control text-center"  
-                            value={amount}
+                            value={count}
                             onChange={() => {}} />
                         <input 
                             type="button" 
                             className="btn btn-secondary" 
                             value="+" 
-                            onClick={() => {incrementAmount(+1)}}
-                            disabled={amount === props.stock}/>
+                            onClick={() => {increase(+1)}}
+                            disabled={count === stock}/>
                     </div>
                     <div className="d-grid gap-2 py-2">
-                        <input 
+                        <button 
+                            disabled={stock <= 0}
                             type="button" 
-                            className="btn btn-success" 
+                            className="btn btn-outline-success" 
                             value="Add" 
-                            onClick={() => {addProducts()}}/>
+                            onClick={() => {onAdd(count)}}> Add to Cart</button>
+                            {/* Mediante el callback onAdd, el componente padre "ItemDetail" le quita responsabilidad a ItemCount para agregar al carrito */}
                     </div>
-                    <p>Selected Products: {itemAdd}</p>
+                    
                 </div>
             </div>
         </div>
     )
 }
+
 
 export default ItemCount;

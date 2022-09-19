@@ -1,10 +1,19 @@
 import React from 'react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import ItemCount from '../ItemCount/ItemCount'
 
 
+export const ItemDetail = ({item}) => {
+    const [ goToCart, setGoToCart ] = useState(false); //estado para indicar si muestra la opción de ir al carrito o no
+    
+    const onAdd = (quantity) => {
+        setGoToCart(true);
+        console.log(`Compraste ${quantity} unidades`);
+    };
 
-const ItemDetail = ({item}) => {
+
     return (
         <div className="container">
             <div className="row">
@@ -16,11 +25,19 @@ const ItemDetail = ({item}) => {
                     <p className="dark-text">{item.category}</p>
                     <p>{item.info}</p>
                     <h3 className="card-text">${item.price}</h3>
-
-                    <ItemCount stock={5} initial={1} onAdd={0} />
+                    {
+                        goToCart 
+                        ? (
+                            <Link to="/cart">
+                                <button className="btn btn-outline-primary">Go to Cart</button>
+                            </Link>
+                            )
+                        : (
+                            <ItemCount stock={5} initial={1} onAdd={onAdd} />
+                            )
+                    }
                 </div>
             </div>
-            
         </div>
     )
 }
