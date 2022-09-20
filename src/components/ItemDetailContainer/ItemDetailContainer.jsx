@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { products } from '../data/data'
 
-import { useParams } from 'react-router-dom'
+
+//////      RESPONSABILIDAD: Renderizar un solo producto
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})  //Persisto mis datos para pasarselo al hijo. Lo inicializo con un objeto vacío

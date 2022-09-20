@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import ItemList from '../ItemList/ItemList';
-import './ItemListContainer.css'
-import { products } from '../data/data';
 import { useParams } from 'react-router-dom';
+
+import ItemList from '../ItemList/ItemList';
+import { products } from '../data/data';
+
+import './ItemListContainer.css'
+
+//////      RESPONSABILIDAD: Renderizar cards
 
 const ItemListContainer = ({greeting}) => {
     const [items, setItems] = useState([]);

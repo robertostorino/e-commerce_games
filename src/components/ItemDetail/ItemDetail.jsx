@@ -1,15 +1,21 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState, useContext } from 'react'
+import { CartContext } from '../../Context/CartContext';
+
 import { Link } from 'react-router-dom';
+
 
 import ItemCount from '../ItemCount/ItemCount'
 
 
-export const ItemDetail = ({item}) => {
+export const ItemDetail = ({ item }) => {
     const [ goToCart, setGoToCart ] = useState(false); //estado para indicar si muestra la opción de ir al carrito o no
     
+    //Estoy recibiendo un objeto, así que aplico destructuring para simplificar
+    const { addToCart} = useContext(CartContext);
+
     const onAdd = (quantity) => {
         setGoToCart(true);
+        addToCart(item, quantity)
         console.log(`Compraste ${quantity} unidades`);
     };
 
