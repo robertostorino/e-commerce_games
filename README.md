@@ -9,8 +9,8 @@ Play 4 Win es un e-commerce para videojuegos de consola.
 
 - Permite visualizar un catálogo de videojuegos
 - Permite filtrar por categoría de la consola:
--- PS4
--- PS5
+- - PS4
+- - PS5
 - Al hacer click en la imagen de un juego o en el botón de "Ver más" se accede a la vista con detalle del juego
 - Cada artículo cuenta con un detalle y un botón para agregar al carrito
 
@@ -39,6 +39,7 @@ Install the dependencies and devDependencies and start the server.
 cd my-app
 npm i
 npm i react-router-dom
+npm start
 ```
 
 
