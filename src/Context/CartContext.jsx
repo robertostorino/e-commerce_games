@@ -59,7 +59,24 @@ const CartProvider = ({children}) => {
             setCart([...cart, { ...item, quantity }]);
         }
     }
+
+    //  -> Función para calcular el monto total
+    //Le paso como valor inicical 0
+    //previous será el acumulador
+    //reduce recorrerà todo el array de cart, y por cada elemento aplica la función previous + (actual.quantity * actual.price)
+    //el resultado de dicha función se acumulará en la variable previous
+    const totalPrice = () => {
+        return cart.reduce((previous, actual) => previous + (actual.quantity * actual.price), 0);
+    }
     
+    //  -> Función para calcular el total de productos en el cart
+    //LE paso como valor inicial 0
+    //accumulator será el acumulador
+    //reduce recorrerá todo el array de cartm y aplicará la función por cada elemento.
+    //el resultado de dicha función se acumulará en la variable accumulator
+    const totalProducts = () => {
+        return cart.reduce((accumulator, currentProduct) => accumulator + currentProduct.quantity, 0);
+    }
 
     
     console.log('carrito: ', cart);
@@ -73,7 +90,10 @@ const CartProvider = ({children}) => {
             isInCart,
             addToCart,
             removeItem,
-            clearCart
+            clearCart,
+            totalPrice,
+            totalProducts,
+            cart
         }}>
             {children};
         </CartContext.Provider>
