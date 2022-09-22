@@ -22,7 +22,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
     return (
         <div className="container py-4">
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-4">
                     <p className="text-center"> Product Name:</p>
                     <div className="input-group">
                         <input 
@@ -47,9 +47,12 @@ const ItemCount = ({initial, stock, onAdd}) => {
                         <button 
                             disabled={stock <= 0}
                             type="button" 
-                            className="btn btn-outline-success" 
+                            className="btn btn-outline-success d-flex justify-content-center aling" 
                             value="Add" 
-                            onClick={() => {onAdd(count)}}> Add to Cart</button>
+                            onClick={() => {onAdd(count)}}>
+                                <span class="material-symbols-outlined">add</span>
+                                <p>Add to Cart</p>
+                        </button>
                             {/* Mediante el callback onAdd, el componente padre "ItemDetail" le quita responsabilidad a ItemCount para agregar al carrito */}
                     </div>
                     

@@ -16,9 +16,13 @@ const Cart = () => {
                 ? 
 
                     (
-                        <div> 
-                            <p>Cart is Empty</p>
-                            <Link to='/'>Go to buy</Link>
+                        <div className='container text-bg-warning p-3 text-center fs-5 fw-bold'> 
+                            <p>Cart is Empty!</p>
+                            <Link to='/'>
+                                <button className="btn btn-outline-primary p-3 m-5 fs-5 fw-bold">
+                                    Go back to buy 😉
+                                </button>
+                            </Link>
                         </div>
                     )
 
@@ -29,10 +33,12 @@ const Cart = () => {
                             {
                                 cart.map(product => <ItemCart key={product.id} product={product}/>)
                             }    
-                                <p>
-                                    Total: ${totalPrice()}
-                                </p>
-                                <button onClick={() => clearCart()}>Clear Cart</button>
+                                <div className='d-flex justify-content-evenly'>
+                                    <p className='fs-5 fw-bold'>
+                                        Total: ${totalPrice()}
+                                    </p>
+                                    <button onClick={() => clearCart()} className='px-5 btn btn-outline-info'>Clear Cart</button>
+                                </div>
                         </div>
                     )
             }

@@ -16,7 +16,12 @@ const ItemCart = ({ product }) => {
                 <p>Quantity: {product.quantity}</p>
                 <p>Price: ${product.price}</p>
                 <p>Subtotal: ${product.quantity * product.price}</p>
-                <button onClick={() => removeItem(product.id)}>Remove product</button>
+                <button 
+                    onClick={() => removeItem(product.id)} 
+                    className="btn btn-outline-danger d-flex justify-content-center">
+                    <span class="material-symbols-outlined">delete</span>
+                    Remove product
+                </button>
             </div>
         </div>
     )

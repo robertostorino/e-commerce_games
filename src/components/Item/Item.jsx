@@ -13,7 +13,8 @@ const Item = ({item}) => {
                 <h3 className="card-title text-center">{item.title}</h3>
                 <p className="card-text text-center">${item.price}</p>
                 <Link to={`/item/${item.id}`}>
-                    <button className="btn btn-outline-secondary">Ver detalles
+                    <button className="btn btn-outline-secondary">
+                        Ver detalles
                     </button> 
                 </Link>
             </div>

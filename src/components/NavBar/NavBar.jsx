@@ -1,10 +1,16 @@
-import React from 'react'
-import './NavBar.css'
-import CartWidget from './CartWidget/CartWidget'
-import logo from '../../assets/images/logo.png'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../Context/CartContext'
+
+import CartWidget from './CartWidget/CartWidget'
+
+import logo from '../../assets/images/logo.png'
+import './NavBar.css'
 
 const NavBar = () => {
+    const { cart } = useContext(CartContext);
+    console.log('carrito: ', cart);
+
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container py-2 sticky-md-top color_grey rounded">
@@ -23,7 +29,13 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div>
-                    <CartWidget />
+                    { 
+                        (cart.length !== 0) && 
+                                                (<Link to='/cart'>
+                                                    <CartWidget />
+                                                </Link>
+                                                ) 
+                    }
                 </div>
             </div>
         </nav>
