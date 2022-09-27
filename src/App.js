@@ -20,9 +20,9 @@ const App = () => {
           <NavBar />
             <Routes>
               <Route path='/' element={<ItemListContainer greeting="Bienvenido a Play 4 Win" />} />
-              <Route path='/category/:category' element={<ItemListContainer />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer />} />
               <Route path='/category' element={<ItemListContainer />} />
-              <Route path='/item/:id' element={<ItemDetailContainer />}/>
+              <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
               <Route path='/cart' element={<Cart />}/>
             </Routes>
         </BrowserRouter>
