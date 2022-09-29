@@ -38,6 +38,7 @@ const Cart = () => {
                                         Total: ${totalPrice()}
                                     </p>
                                     <button onClick={() => clearCart()} className='px-5 btn btn-outline-info'>Clear Cart</button>
+                                    <Link to='/checkout'>Checkout</Link>
                                 </div>
                         </div>
                     )

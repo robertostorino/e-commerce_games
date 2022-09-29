@@ -1,6 +1,8 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState, useContext } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+
 import { CartContext } from '../../Context/CartContext'
+import { getDocs, collection, getFirestore } from 'firebase/firestore'
 
 import CartWidget from './CartWidget/CartWidget'
 
@@ -9,7 +11,30 @@ import './NavBar.css'
 
 const NavBar = () => {
     const { cart } = useContext(CartContext);
-    console.log('carrito: ', cart);
+    const [cat, setCat] = useState([]); //Hook para el estado de listas de categorías
+
+    useEffect(() => {
+        
+        //Hago el pedido de firestore y lo almaceno en la variable
+        const querydb = getFirestore();
+        
+        //Creo el puntero a items
+        // items es el nombre de la colección donde lo guardé en firestore, sería la tabla
+        const categoryCollection = collection(querydb, 'categories');
+
+        //hago la promesa
+        //response.docs me trae los objetos
+        //por cada categoría, tomo el id, y le agrego los datos de la categoría.
+        getDocs(categoryCollection).then((response) => {
+            const categoryList = response.docs.map((cat) => {
+                return {
+                    id: cat.id,
+                    ...cat.data(),
+                };
+            });
+            setCat(categoryList);
+        });
+    }, []);
 
     return (
         <nav className="navbar navbar-expand-lg">
@@ -20,12 +45,17 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link to='/category/ps4' className="nav-link underline-hover" >PS4</Link>
+                        {cat.map((category) => (
+                            <li className="nav-item">
+                            <NavLink 
+                                key={category.id}
+                                to={`/category/${category.path}`} 
+                                className="nav-link underline-hover" 
+                            >
+                                {category.name}
+                            </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <Link to='/category/ps5' className="nav-link underline-hover" >PS5</Link>
-                        </li>
+                        ))}
                     </ul>
                 </div>
                 <div>
