@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import Form from '../Form/Form'
 
+import './Checkout.css'
+
 const Checkout = () => {
     const [orderId, setOrderId] = useState('')
     
@@ -17,7 +19,7 @@ const Checkout = () => {
         );
     }
     return (
-        <div>
+        <div className='container-fluid bg-checkout'>
             <Form handleId={handleId}/>
         </div>
     )
