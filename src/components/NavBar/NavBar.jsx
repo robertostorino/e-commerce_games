@@ -39,6 +39,7 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container py-2 sticky-md-top color_grey rounded">
+                <p className='brand'>PLAY <span className='brand-mid'>4</span> WIN</p>
                 <Link to='/category' className="navbar-brand" ><img src={logo} alt="Play 4 win" width="58" /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

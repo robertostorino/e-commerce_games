@@ -1,6 +1,8 @@
 .card--principal {
-    transition: 600ms ease-in-out;
+    transition: 500ms ease-in-out;
+    border: none;
 }
 .card--principal:hover {
-    transform: scale(1.04); 
+    border: 1px solid silver;
+    box-shadow: 2px 3px grey; 
 }

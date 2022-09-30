@@ -35,9 +35,10 @@ const Form = ({ handleId }) => {
     const handleEmail = (event) => setEmail(event.target.value);
 
     return (
-        <div className='container  my-5 container-form d-flex flex-column justify-content-center'>
-            <form className='row col-md-4 gy-2 gx-3 align-items-center'action="" onSubmit={handleSubmit}>
-                <div className='col-md-6'>
+        <div className='container container-form col-md-10'>
+            <div className='bg-form'/>
+            <form className='row col-md-6 gy-4 bg-form form-style'action="" onSubmit={handleSubmit}>
+                <div className='form-group'>
                     <label className='visually-hidden' for='autoSizingInput'>Name</label>
                     <input
                         className='form-control'
@@ -50,8 +51,7 @@ const Form = ({ handleId }) => {
                         required
                     />
                 </div>
-            
-                <div className='col-6'>
+                <div className='form-group'>
                     <label className='visually-hidden' for='autoSizingInput'>Phone</label>
                     <input
                     className='form-control'
@@ -64,8 +64,7 @@ const Form = ({ handleId }) => {
                     required
                     />
                 </div>
-
-                <div className='col-6'>
+                <div className='form-group'>
                     <label className='visually-hidden' for='autoSizingInput'>Email</label>
                     <input
                     className='form-control'
@@ -78,7 +77,7 @@ const Form = ({ handleId }) => {
                     required
                     />
                 </div>
-                <div className='col-6'>
+                <div className='form-group mb-5'>
                     <button type="submit" className='btn btn-primary'>Generate id</button>
                 </div>
         </form>
