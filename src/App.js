@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import CartProvider from './Context/CartContext';
 import Checkout from './components/Checkout/Checkout';
+import Home from './components/Home/Home';
 
 ////    RESPONSABILIDAD: Renderizar las rutas y los componentes
 
@@ -20,7 +21,7 @@ const App = () => {
         <BrowserRouter>
           <NavBar />
             <Routes>
-              <Route path='/' element={<ItemListContainer greeting="Bienvenido a Play 4 Win" />} />
+              <Route path='/' element={<Home />} />
               <Route path='/category/:categoryId' element={<ItemListContainer />} />
               <Route path='/category' element={<ItemListContainer />} />
               <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
