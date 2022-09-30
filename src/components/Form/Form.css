@@ -1,6 +1,8 @@
 .container-form {
-    background-color: palevioletred;
+    /* display: flex;
+    justify-content: center; */
+    background-color: cadetblue;
     border-radius: 12px;
-    padding: 20px 7px;
+    padding: 20px 15px;
     opacity: 0.8;
 }

@@ -28,59 +28,59 @@ const Form = ({ handleId }) => {
         });
     };
 
-    const handleName = (e) => setName(e.target.value);
+    const handleName = (event) => setName(event.target.value);
 
-    const handlePhone = (e) => setPhone(e.target.value);
+    const handlePhone = (event) => setPhone(event.target.value);
 
-    const handleEmail = (e) => setEmail(e.target.value);
+    const handleEmail = (event) => setEmail(event.target.value);
 
     return (
-        <div className='container col-md-2 my-5 container-form'>
-            <form className='row gy-2 gx-3 align-items-center'action="" onSubmit={handleSubmit}>
-            <div className='col-auto'>
-                <label className='visually-hidden' for='autoSizingInput'>Name</label>
-                <input
+        <div className='container  my-5 container-form d-flex flex-column justify-content-center'>
+            <form className='row col-md-4 gy-2 gx-3 align-items-center'action="" onSubmit={handleSubmit}>
+                <div className='col-md-6'>
+                    <label className='visually-hidden' for='autoSizingInput'>Name</label>
+                    <input
+                        className='form-control'
+                        id='autoSizingInput'
+                        type="text"
+                        name="name"
+                        placeholder="Complete Name"
+                        value={name}
+                        onChange={handleName}
+                        required
+                    />
+                </div>
+            
+                <div className='col-6'>
+                    <label className='visually-hidden' for='autoSizingInput'>Phone</label>
+                    <input
                     className='form-control'
                     id='autoSizingInput'
-                    type="text"
-                    name="name"
-                    placeholder="Complete Name"
-                    value={name}
-                    onChange={handleName}
+                    type="number"
+                    name="phone"
+                    placeholder="Phone"
+                    value={phone}
+                    onChange={handlePhone}
                     required
-                />
-            </div>
-            
-            <div className='col-auto'>
-                <label className='visually-hidden' for='autoSizingInput'>Phone</label>
-                <input
-                className='form-control'
-                id='autoSizingInput'
-                type="number"
-                name="phone"
-                placeholder="Phone"
-                value={phone}
-                onChange={handlePhone}
-                required
-                />
-            </div>
+                    />
+                </div>
 
-            <div className='col-auto'>
-                <label className='visually-hidden' for='autoSizingInput'>Email</label>
-                <input
-                className='form-control'
-                id='autoSizingInput'
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={handleEmail}
-                required
-                />
-            </div>
-            <div className='col-auto'>
-                <button type="submit" className='btn btn-primary'>Generate id</button>
-            </div>
+                <div className='col-6'>
+                    <label className='visually-hidden' for='autoSizingInput'>Email</label>
+                    <input
+                    className='form-control'
+                    id='autoSizingInput'
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={handleEmail}
+                    required
+                    />
+                </div>
+                <div className='col-6'>
+                    <button type="submit" className='btn btn-primary'>Generate id</button>
+                </div>
         </form>
         </div>
     );
