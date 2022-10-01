@@ -39,7 +39,7 @@ const Form = ({ handleId }) => {
             <div className='bg-form'/>
             <form className='row col-md-6 gy-4 bg-form form-style'action="" onSubmit={handleSubmit}>
                 <div className='form-group'>
-                    <label className='visually-hidden' for='autoSizingInput'>Name</label>
+                    <label className='visually-hidden' htmlFor='autoSizingInput'>Name</label>
                     <input
                         className='form-control'
                         id='autoSizingInput'
@@ -52,7 +52,7 @@ const Form = ({ handleId }) => {
                     />
                 </div>
                 <div className='form-group'>
-                    <label className='visually-hidden' for='autoSizingInput'>Phone</label>
+                    <label className='visually-hidden' htmlFor='autoSizingInput'>Phone</label>
                     <input
                         className='form-control'
                         id='autoSizingInput'
@@ -65,7 +65,7 @@ const Form = ({ handleId }) => {
                     />
                 </div>
                 <div className='form-group'>
-                    <label className='visually-hidden' for='autoSizingInput'>Email</label>
+                    <label className='visually-hidden' htmlFor='autoSizingInput'>Email</label>
                     <input
                         className='form-control'
                         id='autoSizingInput'

@@ -19,7 +19,8 @@ const Checkout = () => {
                 <div className='col-6 borde'>
                     <h2>Thanks for your purchase</h2>
                     <br />
-                    <p className='fst-italic'>Your order number is:{' '} 
+                    <p className='fst-italic'>Your order number is:{' '}
+                    <br />
                     <span className='text-bg-success p-3 fw-bolder'>{orderId}</span></p>
                 </div>
             </div>
