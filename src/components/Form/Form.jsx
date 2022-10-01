@@ -54,27 +54,27 @@ const Form = ({ handleId }) => {
                 <div className='form-group'>
                     <label className='visually-hidden' for='autoSizingInput'>Phone</label>
                     <input
-                    className='form-control'
-                    id='autoSizingInput'
-                    type="number"
-                    name="phone"
-                    placeholder="Phone"
-                    value={phone}
-                    onChange={handlePhone}
-                    required
+                        className='form-control'
+                        id='autoSizingInput'
+                        type="number"
+                        name="phone"
+                        placeholder="Phone"
+                        value={phone}
+                        onChange={handlePhone}
+                        required
                     />
                 </div>
                 <div className='form-group'>
                     <label className='visually-hidden' for='autoSizingInput'>Email</label>
                     <input
-                    className='form-control'
-                    id='autoSizingInput'
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={handleEmail}
-                    required
+                        className='form-control'
+                        id='autoSizingInput'
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={handleEmail}
+                        required
                     />
                 </div>
                 <div className='form-group mb-5'>

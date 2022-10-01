@@ -3,7 +3,6 @@ import { CartContext } from '../../Context/CartContext';
 
 import { Link } from 'react-router-dom';
 
-
 import ItemCount from '../ItemCount/ItemCount'
 
 
@@ -16,7 +15,6 @@ export const ItemDetail = ({ item }) => {
     const onAdd = (quantity) => {
         setGoToCart(true);
         addToCart(item, quantity)
-        console.log(`Compraste ${quantity} unidades`);
     };
 
 

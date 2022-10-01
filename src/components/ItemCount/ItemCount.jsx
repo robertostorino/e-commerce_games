@@ -6,8 +6,6 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
     //      Hooks
     const [count, setCount] = useState(parseInt(initial));
-    // const [itemStock, setItemStock] = useState(props.stock);
-    // const [itemAdd, setItemAdd] = useState(props.onAdd);
 
     //incrementa
     const increase = (value) => {
@@ -47,15 +45,14 @@ const ItemCount = ({initial, stock, onAdd}) => {
                         <button 
                             disabled={stock <= 0}
                             type="button" 
-                            className="btn btn-outline-success d-flex justify-content-center aling" 
+                            className="btn btn-outline-success d-flex justify-content-center" 
                             value="Add" 
                             onClick={() => {onAdd(count)}}>
-                                <span class="material-symbols-outlined">add</span>
+                                <span className="material-symbols-outlined">add</span>
                                 <p>Add to Cart</p>
                         </button>
                             {/* Mediante el callback onAdd, el componente padre "ItemDetail" le quita responsabilidad a ItemCount para agregar al carrito */}
                     </div>
-                    
                 </div>
             </div>
         </div>

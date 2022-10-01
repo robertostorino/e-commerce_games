@@ -78,10 +78,6 @@ const CartProvider = ({children}) => {
         return cart.reduce((accumulator, currentProduct) => accumulator + currentProduct.quantity, 0);
     }
 
-    
-    console.log('carrito: ', cart);
-
-    
     return (
         //En value le puedo pasar Estados, Objetos, Funciones
         //En este caso le paso un objeto con las funciones

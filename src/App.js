@@ -38,4 +38,4 @@ export default App;
 
 
 //BrowserRouter es un contexto de rutas
-//El compomente de Contexto "CartProvider" envuelve a "BrowserRouter", para que este último le pase su información como props de children
+//El componente de Contexto "CartProvider" envuelve a "BrowserRouter", para que este último le pase su información como props de children
