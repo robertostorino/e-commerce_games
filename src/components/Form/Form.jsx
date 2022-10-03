@@ -43,9 +43,9 @@ const Form = ({ handleId }) => {
                     <input
                         className='form-control'
                         id='autoSizingInput'
-                        type="text"
-                        name="name"
-                        placeholder="Complete Name"
+                        type='text'
+                        name='name'
+                        placeholder='Complete Name'
                         value={name}
                         onChange={handleName}
                         required
@@ -56,9 +56,9 @@ const Form = ({ handleId }) => {
                     <input
                         className='form-control'
                         id='autoSizingInput'
-                        type="number"
-                        name="phone"
-                        placeholder="Phone"
+                        type='number'
+                        name='phone'
+                        placeholder='Phone'
                         value={phone}
                         onChange={handlePhone}
                         required
@@ -78,7 +78,7 @@ const Form = ({ handleId }) => {
                     />
                 </div>
                 <div className='form-group mb-5'>
-                    <button type="submit" className='btn btn-primary'>Generate id</button>
+                    <button type='submit' className='btn btn-primary'>Generate id</button>
                 </div>
         </form>
         </div>

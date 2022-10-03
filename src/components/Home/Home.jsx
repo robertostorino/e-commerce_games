@@ -10,11 +10,8 @@ const Home = () => {
                     <h1>Play 4 Win</h1>
                 </div>
             </div>
-        
-            <ItemListContainer greeting="Bienvenido a Play 4 Win" />
+            <ItemListContainer />
         </div>
-        
-        
     )
 }
 

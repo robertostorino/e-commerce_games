@@ -47,7 +47,6 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         {cat.map((category) => (
-                            // <li className="nav-item">
                             <NavLink 
                                 key={category.id}
                                 to={`/category/${category.path}`} 
@@ -55,7 +54,6 @@ const NavBar = () => {
                             >
                                 {category.name}
                             </NavLink>
-                        // </li>
                         ))}
                     </ul>
                 </div>

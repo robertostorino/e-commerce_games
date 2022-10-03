@@ -19,9 +19,8 @@ const Checkout = () => {
                 <div className='col-6 borde'>
                     <h2>Thanks for your purchase</h2>
                     <br />
-                    <p className='fst-italic'>Your order number is:{' '}
-                    <br />
-                    <span className='text-bg-success p-3 fw-bolder'>{orderId}</span></p>
+                    <p className='fst-italic col-xs-6 col-md-4 text-center'>Your order number is:{' '} </p>
+                    <p className='text-bg-success p-3 fw-bolder col-xs-6 col-md-4 text-center'>{orderId}</p>
                 </div>
             </div>
         );

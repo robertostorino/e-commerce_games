@@ -14,7 +14,7 @@ import './ItemListContainer.css'
 // 2) Creo un puntero al dato que queremos traer -> con doc
 // 3) Traigo el dato con una promesa -> La promesa está en getDoc
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {categoryId} = useParams();
 
@@ -60,7 +60,7 @@ const ItemListContainer = ({greeting}) => {
                         <div className="spinner-border text-primary align-middle" role="status">
                             <span className="visually-hidden">Loading...</span>
                         </div>
-                        <h4>Cargando ...</h4>
+                        <h4>Loading ...</h4>
                     </div>
                 )}
         </div>
