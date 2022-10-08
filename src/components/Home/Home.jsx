@@ -7,7 +7,7 @@ const Home = () => {
         <div>
             <div className="hero-image">
                 <div className="hero-text">
-                    <h1>Play 4 Win</h1>
+                    <h1>PLAY <span className='brand-mid'>4</span> WIN</h1>
                 </div>
             </div>
             <ItemListContainer />
