@@ -14,7 +14,7 @@ const Item = ({item}) => {
                 <p className="card-text text-center">${item.price}</p>
                 <Link to={`/item/${item.id}`}>
                     <button className="btn btn-outline-secondary">
-                        Ver detalles
+                        See details
                     </button> 
                 </Link>
             </div>

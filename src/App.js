@@ -6,6 +6,7 @@ import './components/NavBar/NavBar.css';
 
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
@@ -28,6 +29,7 @@ const App = () => {
               <Route path='/cart' element={<Cart />}/>
               <Route path='/checkout' element={<Checkout />}/>
             </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </div>

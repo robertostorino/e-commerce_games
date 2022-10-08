@@ -12,6 +12,8 @@ body, html {
     background-size: cover;
     position: relative;
 
+    background-attachment: fixed;
+
 }
 
 .hero-text {
