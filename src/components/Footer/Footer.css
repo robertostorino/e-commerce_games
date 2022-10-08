@@ -1,0 +1,7 @@
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images2.alphacoders.com/602/602223.jpg');
+    background-color: rgba(3, 3, 3, 0.545);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
