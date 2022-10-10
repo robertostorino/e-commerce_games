@@ -4,6 +4,7 @@ import { CartContext } from '../../Context/CartContext'
 import { Link } from 'react-router-dom';
 
 import ItemCart from '../ItemCart/ItemCart';
+import CartEmpty from '../CartEmpty/CartEmpty';
 
 const Cart = () => {
     const { cart, totalPrice, clearCart } = useContext(CartContext);
@@ -16,11 +17,12 @@ const Cart = () => {
                 ? 
 
                     (
-                        <div className='container text-bg-warning p-3 text-center fs-5 fw-bold'> 
+                        <div className='container-fluid text-center fs-5 fw-bold'> 
+                            <CartEmpty />
                             <p>Cart is Empty!</p>
                             <Link to='/'>
                                 <button className="btn btn-outline-primary p-3 m-5 fs-5 fw-bold">
-                                    Go back to buy 😉
+                                    Keep an eye on our new products 😉
                                 </button>
                             </Link>
                         </div>
@@ -37,8 +39,20 @@ const Cart = () => {
                                     <p className='fs-5 fw-bold'>
                                         Total: ${totalPrice()}
                                     </p>
-                                    <button onClick={() => clearCart()} className='px-5 btn btn-outline-info'>Clear Cart</button>
-                                    <Link to='/checkout'>Checkout</Link>
+                                    <button onClick={() => clearCart()} className='px-2 btn btn-outline-warning'>
+                                        <span class="material-symbols-outlined">
+                                            delete_forever
+                                        </span>
+                                        Clear Cart
+                                    </button>
+                                    <Link to='/checkout'>
+                                        <button className='px-2 btn btn-outline-success'>
+                                            <span class="material-symbols-outlined">
+                                                shopping_cart_checkout
+                                            </span>
+                                            Checkout
+                                        </button>
+                                    </Link>
                                 </div>
                         </div>
                     )

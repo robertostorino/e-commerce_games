@@ -4,4 +4,10 @@ footer {
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
+
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
 }

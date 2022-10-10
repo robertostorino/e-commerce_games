@@ -19,7 +19,9 @@ const ItemCart = ({ product }) => {
                 <button 
                     onClick={() => removeItem(product.id)} 
                     className="btn btn-outline-danger d-flex justify-content-center">
-                    <span className="material-symbols-outlined">delete</span>
+                    <span className="material-symbols-outlined">
+                        delete
+                    </span>
                     Remove product
                 </button>
             </div>
