@@ -2,7 +2,9 @@ import React, { useState, useContext } from 'react'
 import { CartContext } from '../../Context/CartContext';
 import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
 
+
 import './Form.css'
+
 
 const Form = ({ handleId }) => {
     const [name, setName] = useState('');
@@ -12,7 +14,7 @@ const Form = ({ handleId }) => {
     const total = totalPrice();
 
     const handleSubmit = (e) => {
-        e.preventDefault(); //Me ayuda a prevenir efecto que tiene el submit por defect, ya que sino se reiniciaría
+        e.preventDefault(); //Me ayuda a prevenir efecto que tiene el submit por defecto, ya que sino se reiniciaría
         
         //Orden para el comprador
         const order = {
@@ -26,6 +28,8 @@ const Form = ({ handleId }) => {
         addDoc(orderReference, order).then((response) => {
             handleId(response.id);
         });
+
+        
     };
 
     const handleName = (event) => setName(event.target.value);
@@ -37,50 +41,51 @@ const Form = ({ handleId }) => {
     return (
         <div className='container container-form col-md-10'>
             <div className='bg-form'/>
-            <form className='row col-md-6 gy-4 bg-form form-style'action="" onSubmit={handleSubmit}>
-                <div className='form-group'>
-                    <label className='visually-hidden' htmlFor='autoSizingInput'>Name</label>
-                    <input
-                        className='form-control'
-                        id='autoSizingInput'
-                        type='text'
-                        name='name'
-                        placeholder='Complete Name'
-                        value={name}
-                        onChange={handleName}
-                        required
-                    />
-                </div>
-                <div className='form-group'>
-                    <label className='visually-hidden' htmlFor='autoSizingInput'>Phone</label>
-                    <input
-                        className='form-control'
-                        id='autoSizingInput'
-                        type='number'
-                        name='phone'
-                        placeholder='Phone'
-                        value={phone}
-                        onChange={handlePhone}
-                        required
-                    />
-                </div>
-                <div className='form-group'>
-                    <label className='visually-hidden' htmlFor='autoSizingInput'>Email</label>
-                    <input
-                        className='form-control'
-                        id='autoSizingInput'
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={handleEmail}
-                        required
-                    />
-                </div>
-                <div className='form-group mb-5'>
-                    <button type='submit' className='btn btn-primary'>Generate id</button>
-                </div>
-        </form>
+                <form className='row col-md-6 gy-4 bg-form form-style'action="" onSubmit={handleSubmit}>
+                    <div className='form-group'>
+                        <label className='visually-hidden' htmlFor='autoSizingInput'>Name</label>
+                        <input
+                            className='form-control'
+                            id='autoSizingInput'
+                            type='text'
+                            name='name'
+                            placeholder='Complete Name'
+                            value={name}
+                            onChange={handleName}
+                            required
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label className='visually-hidden' htmlFor='autoSizingInput'>Phone</label>
+                        <input
+                            className='form-control'
+                            id='autoSizingInput'
+                            type='number'
+                            name='phone'
+                            placeholder='Phone'
+                            value={phone}
+                            onChange={handlePhone}
+                            required
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label className='visually-hidden' htmlFor='autoSizingInput'>Email</label>
+                        <input
+                            className='form-control'
+                            id='autoSizingInput'
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={handleEmail}
+                            required
+                        />
+                    </div>
+                    <div className='form-group mb-5'>
+                        <button type='submit' className='btn btn-primary'>Generate id</button>
+                    </div>
+                    
+            </form>
         </div>
     );
 };
