@@ -22,7 +22,7 @@ const Cart = () => {
                             <p>Cart is Empty!</p>
                             <Link to='/'>
                                 <button className="btn btn-outline-primary p-3 m-5 fs-5 fw-bold">
-                                    Keep an eye on our new products 😉
+                                    Keep an eye on our new products
                                 </button>
                             </Link>
                         </div>
