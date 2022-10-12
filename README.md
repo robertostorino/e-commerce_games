@@ -2,13 +2,14 @@
 ## _e-commerce built with React.js by Roberto Storino_ 
 
 
-Play 4 Win es un e-commerce para videojuegos de consola.
+Play 4 Win is the e-commerce where you can find all about videogames.
 
 
 ## Features
 
 - Permite visualizar un catálogo de videojuegos
 - Permite filtrar por categoría de la consola:
+   - Accesories
    - PS4
    - PS5
 - Al hacer click en la imagen de un juego o en el botón de "Ver más" se accede a la vista con detalle del juego
@@ -22,7 +23,8 @@ Play 4 Win utiliza varias tecnologías open source para trabajar correctamente:
 
 | Tech | Purpose |
 | ------ | ------ |
-| ReactJS | HTML enhanced for web apps. |
+| React js | HTML enhanced for web apps. |
+| Firebase | To manage database on cloud |
 | react-router-dom | To manage navigation |
 | react-hot-toast | To add notifications |
 | Font Awesome - React | To add icons for react |
