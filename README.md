@@ -37,12 +37,11 @@ Play 4 Win utiliza varias tecnologías open source para trabajar correctamente:
 
 Play 4 Win requires [Node.js](https://nodejs.org/) v16+ to run.
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and start the server.
 
 ```sh
 cd my-app
 npm i
-npm i react-router-dom
 npm start
 ```
 
