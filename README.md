@@ -25,6 +25,7 @@ Play 4 Win utiliza varias tecnologías open source para trabajar correctamente:
 | ReactJS | HTML enhanced for web apps. |
 | react-router-dom | To manage navigation |
 | react-hot-toast | To add notifications |
+| Font Awesome - React | To add icons for react |
 | Bootstrap | great UI boilerplate for modern web apps |
 | NodeJS | To support the runtime environment |
 

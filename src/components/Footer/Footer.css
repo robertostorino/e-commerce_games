@@ -11,3 +11,13 @@ footer {
     left: 0;
     padding: 1rem;
 }
+
+.singleCol {
+    max-width: 750px;
+    margin: 0 auto; /* para centrar*/
+}
+
+.social-media-icons-white a {
+    color: white;
+    font-size: 2rem;
+}
