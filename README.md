@@ -31,6 +31,8 @@ Play 4 Win utiliza varias tecnologías open source para trabajar correctamente:
 | Bootstrap | great UI boilerplate for modern web apps |
 | NodeJS | To support the runtime environment |
 
+![Play4Win (600)](https://user-images.githubusercontent.com/79215252/195472251-c2f0125d-38ca-46d1-a61c-e47a7df62411.gif)
+
 
 
 ## Installation
