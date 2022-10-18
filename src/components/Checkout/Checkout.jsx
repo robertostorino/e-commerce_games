@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../../Context/CartContext'
 import { Toaster, toast } from 'react-hot-toast'
 
-import Form from '../Form/Form'
 
 import './Checkout.css'
 import { useEffect } from 'react'
+import FormMain from '../Form/FormMain'
 
 //Toaster es el componente de notificación
 //toast es la función de javascript que llama a Toaster
@@ -35,10 +35,11 @@ const Checkout = () => {
                 <div className='col-6 borde'>
                     <h2>Thanks for your purchase</h2>
                     <br />
+                    <br />
                     <span>Your order ID is: <b>{orderId}</b></span>
 
                     <Toaster />
-
+                    
                 </div>
             </div>
         );
@@ -46,7 +47,7 @@ const Checkout = () => {
     
     return (
         <div className='container-fluid bg-checkout'>
-            <Form handleId={handleId}/>
+            <FormMain handleId={handleId}/>
         </div>
     )
 }

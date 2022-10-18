@@ -53,8 +53,6 @@ const ItemListContainer = () => {
     
     return (
         <div className="container">
-            
-            {/* <h1 className="text-center text-blue">{greeting}</h1> */}
             { items.length ? (<ItemList items={items}/>) : (
                     <div className="text-center my-5">
                         <div className="spinner-border text-primary align-middle" role="status">
