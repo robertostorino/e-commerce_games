@@ -40,14 +40,14 @@ const Cart = () => {
                                         Total: ${totalPrice()}
                                     </p>
                                     <button onClick={() => clearCart()} className='px-2 btn btn-outline-warning'>
-                                        <span class="material-symbols-outlined">
+                                        <span className="material-symbols-outlined">
                                             delete_forever
                                         </span>
                                         Clear Cart
                                     </button>
                                     <Link to='/checkout'>
                                         <button className='px-2 btn btn-outline-success'>
-                                            <span class="material-symbols-outlined">
+                                            <span className="material-symbols-outlined">
                                                 shopping_cart_checkout
                                             </span>
                                             Checkout

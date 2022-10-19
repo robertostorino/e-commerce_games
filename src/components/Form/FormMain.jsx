@@ -8,6 +8,7 @@ import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/fire
 
 import Input from './Input';
 
+
 const FormMain = ({ handleId }) => {
     const [name, setName] = useState({field: '', valid: null});
     const [phone, setPhone] = useState({field: '', valid: null});
